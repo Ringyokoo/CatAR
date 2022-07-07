@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content ="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <title>Cat</title>
+    
+
+    <style>
+        .box {display: flex;}
+        model-viewer { width: 800px; height: 600px; margin: 0, auto;}
+    </style>
+
+  </head>
+  <body>
+    <div class="box">
+        <model-viewer src="cat/scene.glb" camera-controls auto-rotate disable-zoom shadow-intensity="1" autoplay ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
+     </div>
+    </div>
+  </body>
+</html>
