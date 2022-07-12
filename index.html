@@ -83,6 +83,7 @@
     window.switchSrc = (element, name) => {
         //   const base = "../../assets/ShopifyModels/" + name;
         modelViewer.animationName = name;
+        aud.play();
         //   modelViewer.src = base + '.glb';
         //   modelViewer.poster = base + '.png';
         const slides = document.querySelectorAll(".slide");
@@ -99,6 +100,7 @@
     aud.volume = 0.1;
 
     window.Anim = () => {
+        aud.play();
         (chek.checked) ? modelViewer.play() : modelViewer.pause();
     }
 
