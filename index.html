@@ -40,9 +40,9 @@
                 <img src="phone.png">
             </div>
 
-            <button id="ar-failure">
+            <!-- <button id="ar-failure">
                 AR is not tracking!
-            </button>
+            </button> -->
 
             <span id="Cbox"> Анимация</span>
             <br>
@@ -184,7 +184,7 @@
         position: absolute;
         left: 50%;
         bottom: 175px;
-        animation: elongate 2s infinite ease-in-out alternate;
+        animation: elongate 2s ease-in-out alternate;
         animation-iteration-count: 2;
         display: none;
     }
@@ -194,11 +194,11 @@
     }
 
     model-viewer>#ar-prompt>img {
-        animation: circle 4s linear infinite;
+        animation: circle 4s linear;
         animation-iteration-count: 2;
     }
 
-    model-viewer>#ar-failure {
+    /* model-viewer>#ar-failure {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -208,7 +208,7 @@
 
     model-viewer[ar-tracking="not-tracking"]>#ar-failure {
         display: block;
-    }
+    } */
 
     .slider {
         width: 100%;
