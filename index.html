@@ -40,10 +40,6 @@
                 <img src="phone.png">
             </div>
 
-            <!-- <button id="ar-failure">
-                AR is not tracking!
-            </button> -->
-
             <span id="Cbox"> Анимация</span>
             <br>
             <label class="switch" onclick="Anim()">
@@ -93,7 +89,7 @@
     });
 
     var aud = document.querySelector("audio");
-    aud.volume = 0.3;
+    aud.volume = 0.1;
 
     window.Anim = () => {
         (chek.checked) ? modelViewer.play() : modelViewer.pause();
@@ -184,8 +180,7 @@
         position: absolute;
         left: 50%;
         bottom: 175px;
-        animation: elongate 2s ease-in-out alternate;
-        animation-iteration-count: 2;
+        animation: elongate 2s infinite ease-in-out alternate;
         display: none;
     }
 
@@ -194,21 +189,10 @@
     }
 
     model-viewer>#ar-prompt>img {
-        animation: circle 4s linear;
-        animation-iteration-count: 2;
+        animation: circle 4s linear infinite;
+        /* animation-iteration-count: 2; */
     }
 
-    /* model-viewer>#ar-failure {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 175px;
-        display: none;
-    }
-
-    model-viewer[ar-tracking="not-tracking"]>#ar-failure {
-        display: block;
-    } */
 
     .slider {
         width: 100%;
