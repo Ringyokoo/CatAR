@@ -36,9 +36,13 @@
                 Посмотреть в AR
             </button>
 
-            <div id="ar-prompt">
+            <!-- <div id="ar-prompt">
                 <img src="phone.png">
-            </div>
+            </div> -->
+
+            <div class="preloader">
+                <img class="preloader__image" src="SmallCat.svg"  alt="image description">
+              </div>
 
             <span id="Cbox"> Анимация</span>
             <br>
@@ -99,6 +103,14 @@
     function musicPlay() {
         aud.play();
     }
+
+    window.onload = function () {
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+      document.body.classList.add('loaded');
+      document.body.classList.remove('loaded_hiding');
+    }, 500);
+  }
 </script>
 
 <style>
@@ -300,6 +312,41 @@
     .slider1.round:before {
         border-radius: 50%;
     }
+
+    /* .preloader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  /* фоновый цвет 
+  /* background: #e0e0e0;
+  /* z-index: 1001; 
+} */
+
+.preloader__image {
+  display: block;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
 </style>
 
 </html>
