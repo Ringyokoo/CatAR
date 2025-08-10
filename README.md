@@ -1,1 +1,1 @@
-# ringyokoo.github.io
+# Работа с webAR. Анимация 3d модели кошки
